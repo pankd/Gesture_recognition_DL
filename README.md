@@ -21,12 +21,12 @@ Train different models on the 'train' folder to identify the correct command in 
 
 Two Architectures for Video data analysis: 3D Convs and CNN-RNN Stack:
 For analysing videos using neural networks, below two types of architectures are used commonly. 
-a)	CNN + RNN
+- a) CNN + RNN
 The conv2D network will extract a feature vector for each image, and a sequence of these feature vectors is then fed to an RNN-based network. The output of the RNN is a regular Softmax  (for a classification problem such as this one).
 
 
-b)	3D Convolutional Network, or Conv3D
+- b) 3D Convolutional Network, or Conv3D
 3D convolutions are a natural extension to the 2D convolutions. Just like in 2D conv, you move the filter in two directions (x and y), in 3D Conv, you move the filter in three directions (x, y and z). In this case, the input to a 3D Conv is a video (which is a sequence of 30 RGB images). If we assume that the shape of each image is 100x100x3, for example, the video becomes a 4-D tensor of shape 100x100x3x30 which can be written as (100x100x30)x3 where 3 is the number of channels. Hence, deriving the analogy from 2-D convolutions where a 2-D kernel/filter (a square filter) is represented as (fxf)xc where f is filter size and c is the number of channels, a 3-D kernel/filter (a 'cubic' filter) is represented as (fxfxf)xc (here c = 3 since the input images have three channels). This cubic filter will now '3D-convolve' on each of the three channels of the (100x100x30) tensor.
 
 ## DL Framework used
-Tensorflow
+- Tensorflow
